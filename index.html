@@ -127,22 +127,38 @@
     }
 
     .hero-card {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      min-height: 300px;
+      background: rgba(255,255,255,0.08);
+      padding: 22px;
+      border-radius: 22px;
+      box-shadow: 0 20px 60px rgba(0,0,0,0.15);
+      border: 1px solid rgba(255,255,255,0.08);
     }
 
     .hero-card img {
-      width: 220px;
-      height: 220px;
+      width: 180px;
+      height: 180px;
       object-fit: cover;
       border-radius: 50%;
       display: block;
       margin: 0 auto;
-      box-shadow: 0 20px 40px rgba(0,0,0,0.18);
-      border: 4px solid rgba(255,255,255,0.25);
-      background: #f3efe9;
+    }
+
+    .hero-card .meta {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      margin-top: 16px;
+    }
+
+    .hero-card .meta b {
+      display: block;
+      font-size: 20px;
+    }
+
+    .hero-card .meta small {
+      color: #d7dfe6;
+      font-size: 12px;
     }
 
     .price {
@@ -458,7 +474,7 @@
         <p>I have experience as an Assistant Professor and have contributed to research work at Banaras Hindu University (BHU), including work related to legal document summarization.</p>
         <p>My research interests include Natural Language Processing, Artificial Intelligence and Indian Legal Document Summarization. I also have research publication experience in SN Computer Science and related academic spaces.</p>
         <p>The First Scholar is built to share practical lessons from the research journey and help other scholars understand what to do next.</p>
-        <div class="quote">"I don't do your research for you. I help you understand how to do it better."</div>
+        <div class="quote">“I don't do your research for you. I help you understand how to do it better.”</div>
       </div>
     </div>
   </section>
@@ -536,8 +552,8 @@
         </div>
 
         <span class="error" id="payment-error">Please confirm that you have completed the payment before submitting.</span>
-        <button type="submit" id="submit-btn" class="btn">Submit & Open WhatsApp</button>
-        <div id="success"><strong>✓ Success!</strong> WhatsApp will open with your details. Please send the payment screenshot there.</div>
+        <button type="submit" id="submit-btn" class="btn">Submit & Open Instagram DM</button>
+        <div id="success"><strong>✓ Success!</strong> Instagram DM will open with your details. Please send the payment screenshot there.</div>
       </form>
     </div>
   </section>
@@ -608,8 +624,8 @@ Problem: ${document.getElementById("problem").value || "Not provided"}
 
 I have completed the ₹99 payment.`;
 
-      const yourWhatsAppNumber = "918737955934";
-      window.open("https://wa.me/" + yourWhatsAppNumber + "?text=" + encodeURIComponent(msg), "_blank");
+      const instagramUser = "the_first_scholar";
+      window.open("https://ig.me/m/" + instagramUser, "_blank");
       document.getElementById("success").style.display = "block";
     });
   </script>
