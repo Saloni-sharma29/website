@@ -28,6 +28,7 @@
     }
 
     a { text-decoration: none; color: inherit; }
+    i, em { font-style: normal; }
 
     .wrap {
       max-width: 1050px;
@@ -126,38 +127,22 @@
     }
 
     .hero-card {
-      background: rgba(255,255,255,0.08);
-      padding: 22px;
-      border-radius: 22px;
-      box-shadow: 0 20px 60px rgba(0,0,0,0.15);
-      border: 1px solid rgba(255,255,255,0.08);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 300px;
     }
 
     .hero-card img {
-      width: 180px;
-      height: 180px;
+      width: 220px;
+      height: 220px;
       object-fit: cover;
       border-radius: 50%;
       display: block;
       margin: 0 auto;
-    }
-
-    .hero-card .meta {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 16px;
-      margin-top: 16px;
-    }
-
-    .hero-card .meta b {
-      display: block;
-      font-size: 20px;
-    }
-
-    .hero-card .meta small {
-      color: #d7dfe6;
-      font-size: 12px;
+      box-shadow: 0 20px 40px rgba(0,0,0,0.18);
+      border: 4px solid rgba(255,255,255,0.25);
+      background: #f3efe9;
     }
 
     .price {
@@ -204,21 +189,13 @@
 
     .about {
       display: grid;
-      grid-template-columns: 0.8fr 1.2fr;
+      grid-template-columns: 1fr;
       gap: 40px;
       align-items: center;
     }
 
     .about img {
-      width: 100%;
-      max-height: 520px;
-      object-fit: cover;
-      border-radius: 22px;
-      display: block;
-      margin: 0 auto;
-      border: 4px solid var(--g);
-      box-shadow: 0 4px 12px rgba(0,0,0,.15);
-      background: #f3efe9;
+      display: none;
     }
 
     .about h2 { margin-top: 0; }
@@ -401,11 +378,6 @@
       h2 { font-size: 24px; }
       .hero { padding: 40px 0; }
       section { padding: 40px 0; }
-      .about img {
-        width: 100%;
-        max-width: 320px;
-        height: auto;
-      }
     }
   </style>
 </head>
@@ -439,13 +411,6 @@
 
       <div class="hero-card">
         <img src="saloni.jpg" alt="Saloni Sharma">
-        <div class="meta">
-          <div>
-            <b>Saloni Sharma</b>
-            <small>PhD Research Scholar • Researcher • Academic Mentor</small>
-          </div>
-          <div class="price">₹99</div>
-        </div>
       </div>
     </div>
   </header>
@@ -471,16 +436,13 @@
   <section class="white" id="about">
     <div class="wrap about">
       <div>
-        <img src="saloni.jpg" alt="Saloni Sharma">
-      </div>
-      <div>
         <div class="eyebrow">ABOUT THE SCHOLAR</div>
         <h2>Meet Saloni Sharma</h2>
-        <p>I am a PhD research scholar and researcher with an academic background in Computer Science and Engineering. I completed my <b>B.Tech from Ashoka Institute of Technology and Management<[...]
+        <p>I am a PhD research scholar and researcher with an academic background in Computer Science and Engineering. I completed my B.Tech from Ashoka Institute of Technology and Management and later built my work around research, mentoring, and practical academic guidance.</p>
         <p>I have experience as an Assistant Professor and have contributed to research work at Banaras Hindu University (BHU), including work related to legal document summarization.</p>
-        <p>My research interests include <b>Natural Language Processing, Artificial Intelligence and Indian Legal Document Summarization</b>. I also have research publication experience in <i>SN [...]
+        <p>My research interests include Natural Language Processing, Artificial Intelligence and Indian Legal Document Summarization. I also have research publication experience in SN Computer Science and related academic spaces.</p>
         <p>The First Scholar is built to share practical lessons from the research journey and help other scholars understand what to do next.</p>
-        <div class="quote">"I don't do your research for you. I help you understand how to do it better."</div>
+        <div class="quote">“I don't do your research for you. I help you understand how to do it better.”</div>
       </div>
     </div>
   </section>
