@@ -3,24 +3,31 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Practical PhD and research guidance by Saloni Sharma. Register for initial guidance for ₹99.">
   <title>The First Scholar | PhD Guidance</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
   <style>
     :root {
       --n: #182838;
       --c: #f8f3ea;
       --g: #b48a45;
       --m: #68737b;
+      --white: #fff;
     }
 
     * { box-sizing: border-box; }
 
     body {
       margin: 0;
-      font-family: Arial, sans-serif;
+      font-family: "DM Sans", Arial, sans-serif;
       color: #1c2730;
       background: var(--c);
       line-height: 1.6;
     }
+
+    a { text-decoration: none; color: inherit; }
 
     .wrap {
       max-width: 1050px;
@@ -35,6 +42,13 @@
       padding: 20px 0;
       font-size: 14px;
       font-weight: bold;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 20px;
+      align-items: center;
+      flex-wrap: wrap;
     }
 
     .logo {
@@ -53,11 +67,17 @@
       background: var(--g);
       color: #fff;
       text-decoration: none;
-      border-radius: 4px;
+      border-radius: 999px;
       font-weight: bold;
       font-size: 14px;
       border: none;
       cursor: pointer;
+    }
+
+    .btn.secondary {
+      background: transparent;
+      color: var(--n);
+      border: 1px solid rgba(24, 40, 56, 0.2);
     }
 
     .btn:hover { opacity: .9; }
@@ -70,7 +90,7 @@
 
     .heroGrid {
       display: grid;
-      grid-template-columns: 1fr 1fr;
+      grid-template-columns: 1.2fr 0.8fr;
       gap: 40px;
       align-items: center;
     }
@@ -84,53 +104,115 @@
       margin-bottom: 10px;
     }
 
-    h1 { font-size: 48px; margin: 0 0 10px 0; line-height: 1.2; }
-    h2 { font-size: 32px; margin: 0 0 20px 0; }
-    p.lead { font-size: 18px; margin: 0; color: #ccc; }
+    h1 {
+      font-family: "Playfair Display", Georgia, serif;
+      font-size: clamp(2.6rem, 6vw, 5rem);
+      margin: 0 0 10px 0;
+      line-height: 1.1;
+    }
+
+    h2 {
+      font-family: "Playfair Display", Georgia, serif;
+      font-size: clamp(2rem, 4vw, 2.8rem);
+      margin: 0 0 20px 0;
+      line-height: 1.2;
+    }
+
+    p.lead {
+      font-size: 18px;
+      margin: 0;
+      color: #ccc;
+      max-width: 620px;
+    }
+
+    .hero-card {
+      background: rgba(255,255,255,0.08);
+      padding: 22px;
+      border-radius: 22px;
+      box-shadow: 0 20px 60px rgba(0,0,0,0.15);
+      border: 1px solid rgba(255,255,255,0.08);
+    }
+
+    .hero-card img {
+      width: 100%;
+      aspect-ratio: 4 / 5;
+      object-fit: cover;
+      border-radius: 18px;
+      display: block;
+    }
+
+    .hero-card .meta {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      margin-top: 16px;
+    }
+
+    .hero-card .meta b {
+      display: block;
+      font-size: 20px;
+    }
+
+    .hero-card .meta small {
+      color: #d7dfe6;
+      font-size: 12px;
+    }
+
+    .price {
+      font-size: 34px;
+      font-weight: 800;
+      color: var(--g);
+    }
+
     .center { text-align: center; }
 
     section { padding: 60px 0; }
 
     .grid {
       display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 30px;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 18px;
       margin-top: 30px;
     }
 
     .card {
       background: #fff;
-      padding: 30px;
-      border-radius: 8px;
-      text-align: center;
-      box-shadow: 0 2px 8px rgba(0,0,0,.1);
+      padding: 24px 20px;
+      border-radius: 18px;
+      text-align: left;
+      box-shadow: 0 2px 8px rgba(0,0,0,.08);
+      border: 1px solid #e7e0d5;
     }
 
     .card b {
       font-size: 18px;
       display: block;
-      margin-bottom: 10px;
+      margin-bottom: 8px;
       color: var(--n);
     }
 
     .card small {
       color: var(--m);
+      font-size: 14px;
+      display: block;
+      line-height: 1.5;
     }
 
     .white { background: #fff; }
 
     .about {
       display: grid;
-      grid-template-columns: 1fr 1fr;
+      grid-template-columns: 0.8fr 1.2fr;
       gap: 40px;
       align-items: center;
     }
 
     .about img {
-      width: 220px;
-      height: 220px;
+      width: 100%;
+      max-height: 520px;
       object-fit: cover;
-      border-radius: 50%;
+      border-radius: 22px;
       display: block;
       margin: 0 auto;
       border: 4px solid var(--g);
@@ -139,6 +221,20 @@
     }
 
     .about h2 { margin-top: 0; }
+
+    .about p {
+      color: var(--m);
+      font-size: 16px;
+    }
+
+    .quote {
+      border-left: 3px solid var(--g);
+      padding-left: 18px;
+      font-family: "Playfair Display", Georgia, serif;
+      font-size: 21px;
+      color: var(--n);
+      margin-top: 20px;
+    }
 
     .row {
       display: grid;
@@ -165,10 +261,11 @@
     .field textarea {
       padding: 12px;
       border: 1px solid #ddd;
-      border-radius: 4px;
+      border-radius: 10px;
       font-family: Arial, sans-serif;
       font-size: 14px;
       color: #333;
+      background: #fff;
     }
 
     .field input:focus,
@@ -190,6 +287,7 @@
       align-items: center;
       justify-content: center;
       gap: 10px;
+      flex-wrap: wrap;
     }
 
     .checkbox-group input[type="checkbox"] {
@@ -208,6 +306,7 @@
       font-size: 12px;
       display: none;
       margin-top: 10px;
+      font-weight: bold;
     }
 
     #success {
@@ -217,7 +316,7 @@
       margin-top: 15px;
       padding: 15px;
       background: #e8f5e9;
-      border-radius: 4px;
+      border-radius: 6px;
     }
 
     .pay {
@@ -249,6 +348,31 @@
       margin: 10px 0;
     }
 
+    .faq {
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    .faq-item {
+      background: #fff;
+      border: 1px solid #e7e0d5;
+      border-radius: 14px;
+      padding: 18px 20px;
+      margin: 12px 0;
+    }
+
+    .faq-item strong {
+      display: block;
+      font-size: 16px;
+      color: var(--n);
+      margin-bottom: 8px;
+    }
+
+    .faq-item p {
+      margin: 0;
+      color: var(--m);
+    }
+
     footer {
       background: var(--n);
       color: #fff;
@@ -261,6 +385,10 @@
     footer small { display: block; margin-top: 10px; color: #aaa; }
 
     @media (max-width: 768px) {
+      .nav-links {
+        display: none;
+      }
+
       .heroGrid,
       .about,
       .grid,
@@ -273,8 +401,9 @@
       .hero { padding: 40px 0; }
       section { padding: 40px 0; }
       .about img {
-        width: 180px;
-        height: 180px;
+        width: 100%;
+        max-width: 320px;
+        height: auto;
       }
     }
   </style>
@@ -283,6 +412,12 @@
   <nav>
     <div class="wrap nav">
       <div class="logo">THE FIRST <span>SCHOLAR</span></div>
+      <div class="nav-links">
+        <a href="#about">About</a>
+        <a href="#guidance">Guidance</a>
+        <a href="#register">Register</a>
+        <a href="#faq">FAQ</a>
+      </div>
       <a class="btn gold" href="#register">Register ₹99</a>
     </div>
   </nav>
@@ -293,36 +428,58 @@
         <div class="eyebrow">PH.D. • RESEARCH • ACADEMIC GUIDANCE</div>
         <h1>The First Scholar</h1>
         <h2>Your PhD Journey. Simplified.</h2>
-        <p class="lead">Expert guidance for every stage of your doctoral journey.</p>
+        <p class="lead">Practical guidance for PhD scholars and researchers — from research direction and synopsis to papers, methodology, publication and thesis planning.</p>
+        <div style="display:flex;gap:12px;flex-wrap:wrap;margin-top:24px;">
+          <a class="btn" href="#register">Start for ₹99</a>
+          <a class="btn secondary" href="#about">Meet Saloni</a>
+        </div>
+        <p class="note" style="color:#d9e1e7; margin-top:14px;">Initial guidance/consultation registration. This is not a thesis or paper ghostwriting service.</p>
+      </div>
+
+      <div class="hero-card">
+        <img src="saloni.jpg" alt="Saloni Sharma">
+        <div class="meta">
+          <div>
+            <b>Saloni Sharma</b>
+            <small>PhD Research Scholar • Researcher • Academic Mentor</small>
+          </div>
+          <div class="price">₹99</div>
+        </div>
       </div>
     </div>
   </header>
 
-  <section>
+  <section id="guidance">
     <div class="wrap center">
       <div class="eyebrow">WHAT I CAN HELP WITH</div>
       <h2>Research doesn't have to feel confusing.</h2>
+      <p class="note" style="margin:0 auto; max-width:650px; color: var(--m);">Start with the problem you are facing. Get a practical direction for your next step.</p>
       <div class="grid">
-        <div class="card"><b>PhD Direction</b><br><small>Topic, problem and research direction.</small></div>
-        <div class="card"><b>Synopsis</b><br><small>Structure, objectives, gap and methodology.</small></div>
-        <div class="card"><b>Paper Publication</b><br><small>Journal selection, writing and submission strategy.</small></div>
-        <div class="card"><b>Research Methods</b><br><small>Data collection, analysis and interpretation.</small></div>
-        <div class="card"><b>Thesis Writing</b><br><small>Organization, flow, citations and formatting.</small></div>
-        <div class="card"><b>Viva Preparation</b><br><small>Defense strategy and anticipated questions.</small></div>
+        <div class="card"><b>PhD Direction</b><small>Topic, problem and research direction.</small></div>
+        <div class="card"><b>Synopsis</b><small>Structure, objectives, gap and methodology.</small></div>
+        <div class="card"><b>Research Paper</b><small>Paper structure, clarity and academic workflow.</small></div>
+        <div class="card"><b>Literature Review</b><small>How to read, organize and synthesize papers.</small></div>
+        <div class="card"><b>Research Methods</b><small>Data collection, analysis and interpretation.</small></div>
+        <div class="card"><b>Publication</b><small>Journal evaluation and submission planning.</small></div>
+        <div class="card"><b>Thesis Writing</b><small>Organization, flow, citations and formatting.</small></div>
+        <div class="card"><b>Ethical AI</b><small>Use AI as a research assistant, not a replacement.</small></div>
       </div>
     </div>
   </section>
 
-  <section class="white">
+  <section class="white" id="about">
     <div class="wrap about">
       <div>
         <img src="saloni.jpg" alt="Saloni Sharma">
       </div>
       <div>
-        <div class="eyebrow">ABOUT ME</div>
-        <h2>Saloni Sharma</h2>
-        <p>I have an academic background in Computer Science and Mathematics with specialization in ML and AI. I'm a researcher, mentor, and guide for PhD aspirants and students. Over the years, I've helped students across domains identify research topics, structure their theses, and publish papers.</p>
-        <p>This service is for anyone seeking structured PhD guidance at an affordable cost.</p>
+        <div class="eyebrow">ABOUT THE SCHOLAR</div>
+        <h2>Meet Saloni Sharma</h2>
+        <p>I am a PhD research scholar and researcher with an academic background in Computer Science and Engineering. I completed my <b>B.Tech from Ashoka Institute of Technology and Management</b> and <b>M.Tech from Jawaharlal Nehru University (JNU)</b>.</p>
+        <p>I have experience as an Assistant Professor and have contributed to research work at Banaras Hindu University (BHU), including work related to legal document summarization.</p>
+        <p>My research interests include <b>Natural Language Processing, Artificial Intelligence and Indian Legal Document Summarization</b>. I also have research publication experience in <i>SN Computer Science</i>.</p>
+        <p>The First Scholar is built to share practical lessons from the research journey and help other scholars understand what to do next.</p>
+        <div class="quote">“I don't do your research for you. I help you understand how to do it better.”</div>
       </div>
     </div>
   </section>
@@ -406,11 +563,36 @@
     </div>
   </section>
 
+  <section class="white" id="faq">
+    <div class="wrap center">
+      <div class="eyebrow">FAQ</div>
+      <h2>Before you register</h2>
+      <div class="faq">
+        <div class="faq-item">
+          <strong>What does the ₹99 registration include?</strong>
+          <p>It is an initial guidance/consultation registration. It helps you explain your research situation and identify what kind of guidance you need next.</p>
+        </div>
+        <div class="faq-item">
+          <strong>Will you write my thesis or research paper for me?</strong>
+          <p>No. The platform is for ethical academic guidance. Your research, analysis, results and academic contribution remain your responsibility.</p>
+        </div>
+        <div class="faq-item">
+          <strong>Can I ask about synopsis and research methodology?</strong>
+          <p>Yes. These are among the areas covered by the initial guidance.</p>
+        </div>
+        <div class="faq-item">
+          <strong>How will I be contacted?</strong>
+          <p>Using the email/WhatsApp details submitted during registration.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <section class="white">
     <div class="wrap center">
       <div class="eyebrow">FOLLOW</div>
       <h2>@the_first_scholar</h2>
-      <p class="lead">PhD life • Research tips • Academic guidance • AI in research</p>
+      <p class="lead" style="color: var(--m);">PhD life • Research tips • Academic guidance • AI in research</p>
       <a class="btn" href="https://www.instagram.com/the_first_scholar" target="_blank">Follow on Instagram</a>
     </div>
   </section>
